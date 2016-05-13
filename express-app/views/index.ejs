@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Article List</h1>
+    <a href="/add">add</a>
+    <% articles.forEach(function(article){ %>
+
+      <article>
+        <header><h3><%=article.title%></h3></header>
+        <%=article.body%>
+        <a href="/edit/<%=article.id%>">edit</a>
+        <a href="/del/<%=article.id%>">remove</a>
+      </article>
+
+    <% })  %>
+
+  </body>
+</html>
